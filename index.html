@@ -1,0 +1,317 @@
+<!--
+kalo bapak baca ini, chat saya :D
+..................::.......................
+...............::.-#:......................
+...............-=::%=.:-...................
+...............:+=:#+:+*+****+=-:..........
+....::=+***####*#%%#####%%%%%%%%##+:.......
+...=%@%%%%%%%%%#####%%%%##****##%%@%#+:....
+..-#****######%%%@@@#=-::::--::::-*@@@@#:..
+.:=-:-%*%@%%#-=+*%@*:...*%+@@#@+-=+*@@@@@-:
+.:#+---*###+===+*%@@=-----+**+++***@@@@%%@-
+.+%%@@@@@@@@@@@@%%###%%%%@@@@@@@@@@@@@%%%@#
+:%%%%%%%%####***********#####%%%%@@@%%%%%@@
+-@%%%%#############%%%%%%%%%%%%%%%%%%%%%%@@
+=@%%%%%%############%%############%%%%%%%@@
++%%%%%############################%%%%%%%%%
+*#**######################**************##%
+***+++++==========++++++++++++++++******##%
+**+++++==================+++++++*******#%@@
+***++++++===========++++++++++******#%%%@@@
+*%***++++++++++++++++++++*****##%%%%%%%@@@@
+-@@%%%%%#####*##########%%%%%%%%%%%%@@@@@@@
+:-%@@%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@%
+:::-=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*=-:::
+...:::::::::-----=========----:::::::::::::
+
+-->
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+ <script>
+function close() {
+document.querySelector("#oops").close();
+document.querySelector("#bar").close();
+}
+function show() {
+document.querySelector("#bar").showModal()
+}
+function oops() {
+document.querySelector("#oops").showModal();
+document.getElementById('input').value = 'Ketik Sesuatu...'
+}
+function nota() {
+document.getElementById("popup").classList.toggle("cant")
+}
+function digusur() {
+document.getElementById("g1").classList.toggle("gas")
+}
+function changeBg() {
+document.getElementById("g1").classList.toggle("bbg");
+document.getElementById("g2").style.display="none";
+document.getElementById("g3").style.display="inline";
+}
+function changeBg2() {
+document.getElementById("g1").classList.toggle("bbg");
+document.getElementById("g2").style.display="inline";
+document.getElementById("g3").style.display="none";
+}
+ </script>
+ <style>
+ *{
+  font-family: "Poppins", sans-serif;
+  animation: inFrame 1s
+}
+ #g1.gas{
+  animation: gusurAni 20s;
+  animation-fill-mode: forwards;
+}
+ #g1.bbg{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+ #g1{
+  transition: 0.5s;
+}
+ #oops{
+   position: absolute;
+   font-weight: 300;
+   text-align: center;
+   width: 300px;
+   height: 150px;
+   background: rgb(125,125,125);
+   inset: 0;
+   margin: auto;
+   border-radius: 6px;
+   border: 2px rgb(0,0,0) solid;
+   transition: 1s;
+}
+ #bar{
+   position: absolute;
+   font-weight: 300;
+   text-align: center;
+   width: 300px;
+   height: 300px;
+   background: rgb(125,125,125);
+   inset: 0;
+   margin: auto;
+   border-radius: 6px;
+   border: 2px rgb(0,0,0) solid;
+   transition: 1s;
+}
+ a:link, a:visited{
+   text-decoration: none;
+   color: blue
+}
+ a:hover, a:active{
+   text-decoration: none;
+   color: red
+}
+ dialog::backdrop { 
+   background-color: black;
+   opacity: 60%;
+   transition: 1s
+}
+ #popup{
+   position: absolute;
+   width: 200px;
+   height: 30px;
+   background: rgb(125,125,125);
+   display: none;
+   transition: 1s;
+   right: 0;
+   top: 20px;
+   border-radius: 6px
+}
+ #popup.cant{
+   display: block;
+   top: 30px
+}
+ #popup::after{
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 70%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid rgb(125,125,125)
+}
+ #gusur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -550px;
+  transition: 10s;
+}
+ .button1{
+   color: white;
+   background: black;
+   border: 2px solid rgb(0,0,0);
+   text-align: center;
+   text-decoration: none;
+   border-radius: 25px;
+   cursor: pointer;
+   display: inline
+}
+ .button2{
+   color: black;
+   background: white;
+   border: 2px solid rgb(0,0,0);
+   text-align: center;
+   text-decoration: none;
+   border-radius: 25px;
+   cursor: pointer;
+   display: none
+}
+  @keyframes inFrame {
+   from {
+    opacity: 0;
+    transform: translateY(-10px)
+ }
+   to {
+    opacity: 1;
+    transform: translateY(0px)
+ }
+}
+   @keyframes Apasih {
+   from {
+    opacity: 0;
+ }
+   to {
+    opacity: 1;
+    transform: translate(-30px,10px)
+ }
+}
+  @keyframes gusurAni {
+   from {
+    transform: translateX(0px)
+ }
+   to {
+    transform: translateX(10000px)
+ }
+}
+  td{
+   border: 2px rgb(0,0,100);
+   text-align: center
+}
+  .rounded{
+   border: 2px solid rgb(0,0,100);
+   text-align: center;
+   border-radius: 25px;
+   transition: 0.5s;
+}
+  .rounded:hover{
+   background: rgba(0,0,250,50)
+}
+ .rounded2{
+   border: 2px solid rgb(125,125,125);
+   text-align: center;
+   border-radius: 25px;
+   height: 30px;
+   background: rgb(125,125,125);
+   transition: 0.5s
+}
+ .rounded2:hover{
+   background: rgba(200,200,200,50)
+}
+.input{
+   border: 2px solid rgb(0,0,100);
+   border-radius: 25px;
+   transition: 0.5s;
+   width:500px; 
+   height: 35px; 
+   padding-right:30px;
+   padding-left:20px
+}
+ </style>
+ <link rel="shortcut icon" href="https://ugc.production.linktr.ee/ee5d737a-1e1e-45a2-bbd0-08f342b4ff19_Tak-berjudul13-20230520181744.png?io=true&size=avatar-v3_0" type="image/x-icon">
+ <link rel="icon" href="https://ugc.production.linktr.ee/ee5d737a-1e1e-45a2-bbd0-08f342b4ff19_Tak-berjudul13-20230520181744.png?io=true&size=avatar-v3_0" type="image/x-icon">
+ <meta charset="UTF-8">
+ <meta http-equiv=”X-UA-Compatible” content=”IE=edge”>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap" rel="stylesheet">
+ <title>M.VirgoFidoRion</title>
+ </head>
+
+ <body id="g1">
+
+<dialog id="bar" onclick="close()">
+<div>
+  <h4><a href="#">Menu</a></h4>
+  <p><a href="https://www.instagram.com/kochengitemputih_?igsh=bXoweXRscWEzeGNp">My Instagram!</a></p>
+  <p><a href="https://linktr.ee/Fever_Dreams">My LinkTr.ee!</a></p>
+  <p><a href="https://wa.me/+6283890031775?text=Kodingannya%20keren%20banget!,%20Ajarin%20dong!%20">My Contact!</a></p>
+</div>
+</dialog>
+
+<div id="gusur">
+<img src="https://cdn-icons-png.freepik.com/512/819/819392.png">
+</div>
+
+<dialog id="oops" onclick="close()">
+<div>
+ <h4> Oops! 😅</h4><p>Sorry, I can't find what you're looking for<p>
+</div>
+</dialog>
+
+<table>
+  <tr>
+   <td style="width:10%" class="button1" id="g2" onclick="changeBg()">DarkMode<td>
+   <td style="width:10%" class="button2" id="g3" onclick="changeBg2()">LightMode<td>
+   <td style="width:70%"><td>
+   <td class="rounded" onclick="show()" style="width:10%">menu<td>
+   <td class="rounded" onclick="nota()" style="width:10%">login<td>
+  </tr>
+ </table>
+
+<p id="popup">This have no use for now</p>
+
+ </br>
+ </br>
+
+ <table>
+  <tr>
+   <td style="width:100%; font-size:70px; font-weight:500">
+   <div style="display:flex; justify-content: center">
+    <font color="blue">V</font>
+    <font color="red">i</font>
+    <font color="#ffd012">r</font>
+    <font color="blue">g</font>
+    <font color="green">o</font>
+   </div>
+<td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+   <td style="width:20%"><td>
+   <td style="width:60%"><input type="text" onfocus="this.value=''" value="Ketik Sesuatu..." id="input" class="input"><img src="https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-bleue.png" style="width:20px;height:20px;position:absolute;animation: Apasih 1s;animation-fill-mode: forwards;"><td>
+   <td style="width:20%"><td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+   <td style="width:30%"><td>
+   <td class="rounded2" onclick="oops()" style="width:20%">penelusuran<td>
+   <td class="rounded2" onclick="digusur()" style="width:20%">penggusuran<td>
+   <td style="width:30%"><td>
+  </tr>
+ </table>
+ </br>
+ </br>
+ </br>
+ </br>
+ </body>
+ <footer>
+  <p>©2024 M. Virgo Fido Rion, X-D</p>
+ </footer>
+</html>
